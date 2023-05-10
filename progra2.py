@@ -1,4 +1,6 @@
 # Puedes escribir codigo?
 
+import random
 
-print("hola Mundo")
+aletorio = random.randint(1,11)
+print(aletorio)
