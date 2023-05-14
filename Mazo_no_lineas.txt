@@ -15,24 +15,21 @@ Bebé Narwhal, Bebé Unicornio, Pasar al establo, Si esta carta es sacrificada, 
 /Unicornio Básico(Verde), Unicornio Básico, Pasar al establo, Solo escucho discos de vinilo y cintas de casete/
 /Unicornio Básico(Indigo), Unicornio Básico, Pasar al establo, Carta da Unicornio Básico 💖🙌💅🙌💖💁💁😂😂😂/
 /Unicornio Básico(Naranja), Unicornio Básico, Pasar al establo, El pumpkin spice es la esencia de la vida/
-/Unicornio Básico(Morado), Unicornio Básico, Pasar al establo, Carta de Unicornio Básico
-#nomakeup #nofilter #gafasdesol #sincomplejos #selfi #unicornio #TGIF #estaesmicrin/
+/Unicornio Básico(Morado), Unicornio Básico, Pasar al establo, Carta de Unicornio Básico #nomakeup #nofilter #gafasdesol #sincomplejos #selfi #unicornio #TGIF #estaesmicrin/
 /Unicornio Básico(Rojo), Unicornio Básico, Pasar al establo, Las barbas están súper en tendencia/
 /Unicornio Básico(Amarillo), Unicornio Básico, Pasar al establo, Baila como si estuvieras sola
 /Narwhal, Unicornio Básico, Pasar al establo, Esta carta no tiene poderes especiales, pero ¡es tan mona...!/
 /Narwhal Seductor, Unicornio Mágico,  Pasar al establo, Cuando esta carta entra en tu Establo puedes HURTAR una carta de Ventaja/
 /Americornio, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo puedes quitar una carta al azar de la mano de otro jugador/
 /Unicornio Ángel, Unicornio Mágico, Pasar al establo, Si esta carta se encuentra en tu Establo al inicio de tu turno, puedes SACRIFICAR esta carta para, a continuación, poner una carta de Unicornio de la pila de descartes en tu Establo/
-/Unicornio Volador Molesto, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo puedes obligar a otro jugador a DESCARTAR una carta.
-Si esta carta es sacrificada o destruida, devuélvela a tu mano/
+/Unicornio Volador Molesto, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo puedes obligar a otro jugador a DESCARTAR una carta. Si esta carta es sacrificada o destruida, devuélvela a tu mano/
 /Unicornio Caballero Negro, Unicornio Mágico, Pasar al establo, Puedes SACRIFICAR esta carta en lugar de destruir una carta de Unicornio en tu Establo/
 /Unicornio Motosierra, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo puedes DESTRUIR una carta de Ventaja o SACRIFICAR una carta de Desventaja/
 /Narval Con Clase, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo puedes buscar una carta de Ventaja en el mazo de robo y ponerla en tu mano; a continuación, baraja el mazo de robo/
 /Unicornio Extremadamente Destructivo, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo cada jugador (también tú) debe SACRIFICAR una carta de Unicornio/
 /Unicornio Extremadamente Fértil, Unicornio Mágico, Pasar al establo, Si esta carta se encuentra en tu Establo al inicio de tu turno, puedes DESCARTAR una carta para, a continuación, poner un Bebé unicornio de la Guardería en tu Establo/
 /Unicornio Gigante, Unicornio Mágico, Pasar al establo, Esta carta cuenta como 2 cartas de Unicornio. No puedes jugar carta Relincho de ningún tipo/
-/Unicornio Volador Codicioso, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo, ROBA una carta.
-Si esta carta es sacrificada o destruida, devuélvela a tu mano/
+/Unicornio Volador Codicioso, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo, ROBA una carta. Si esta carta es sacrificada o destruida, devuélvela a tu mano/
 /Llamacornio, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo cada jugador (también tú) debe DESCARTAR una carta/
 /Unicornio Volador Mágico, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo puedes buscar una carta de Magia en la pila de descartes y ponerla en tu mano.
 Si esta carta es sacrificada o destruida, devuélvela a tu mano/
