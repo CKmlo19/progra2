@@ -3,6 +3,7 @@ import sys
 from pathlib import Path
 sys.setrecursionlimit(10000000)
 
+# esto abre el archivo que esta en la misma carpeta
 with open("Mazo.txt", "r", encoding="utf-8") as archivo:
     contenido = archivo.read().rstrip("\n")
 
@@ -11,10 +12,10 @@ with open("Mazo.txt", "r", encoding="utf-8") as archivo:
 def iniciar_juego():
     """Funcion que inicia el juego"""
     mazo = separar_mazo_matriz(contenido, 0, len(contenido), '', [])
-    return len(mazo)
+    return mazo
 
 def separar_mazo_matriz(contenido, indice, largo, texto_actual, texto_secciones):
-    '''Funcion que separar el mazo en contenido'''
+    '''Funcion que separar el mazo de acuerdo a un caracter separador previamente en el archivo'''
     if indice == largo:
         # return texto_secciones
         return remover_saltos_linea(texto_secciones, 0, len(texto_secciones), [])
@@ -32,4 +33,10 @@ def remover_saltos_linea(lista_contenido, indice, largo, resultado):
     else:
         return remover_saltos_linea(lista_contenido, indice + 1, largo, resultado + [[lista_contenido[indice]]])
     
+# def separar_lista_columnas(contenido, indice, largo, resultado):
+#     '''Funcion que separar los elementos de la lista en elementos en si'''
+#     if indice == largo:
+#         return resultado
+#     elif co
+
 print(iniciar_juego())

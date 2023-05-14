@@ -1,5 +1,2 @@
-Bebé Narwhal, Bebé Unicornio, Pasar al establo, Descripcion/
-/Bebé Unicornio(Negro), Bebé Unicornio, Pasar al establo, Descripcion/
-/Bebé Unicornio(Blue), Bebé Unicornio, Pasar al establo, Descripcion/
-
-
+Bebé Narwhal, Bebé Unicornio, Pasar al establo/
+/Bebé Unicornio(Negro), Bebé Unicornio, Pasar al establo/
