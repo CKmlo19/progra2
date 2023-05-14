@@ -14,7 +14,7 @@ def iniciar_juego():
     """Funcion que inicia el juego"""
     mazo = separar_mazo_matriz(contenido, 0, len(contenido), '', [])
     mano = manos(mazo)
-    return mazo
+    return mano
 
 def separar_mazo_matriz(contenido, indice, largo, texto_actual, texto_secciones):
     '''Funcion que separar el mazo de acuerdo a un caracter separador previamente en el archivo'''
