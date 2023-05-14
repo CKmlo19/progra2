@@ -31,8 +31,7 @@ Bebé Narwhal, Bebé Unicornio, Pasar al establo, Si esta carta es sacrificada, 
 /Unicornio Gigante, Unicornio Mágico, Pasar al establo, Esta carta cuenta como 2 cartas de Unicornio. No puedes jugar carta Relincho de ningún tipo/
 /Unicornio Volador Codicioso, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo, ROBA una carta. Si esta carta es sacrificada o destruida, devuélvela a tu mano/
 /Llamacornio, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo cada jugador (también tú) debe DESCARTAR una carta/
-/Unicornio Volador Mágico, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo puedes buscar una carta de Magia en la pila de descartes y ponerla en tu mano.
-Si esta carta es sacrificada o destruida, devuélvela a tu mano/
+/Unicornio Volador Mágico, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo puedes buscar una carta de Magia en la pila de descartes y ponerla en tu mano. Si esta carta es sacrificada o destruida, devuélvela a tu mano/
 /Gatitocornio Mágico, Unicornio Mágico, Pasar al establo, Esta carta no puede ser destruida por cartas de Magia/
 /Unicornio Volador Magestuoso, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo puedes buscar una carta de Unicornio en la pila de descartes y ponerla en tu mano. Si esta carta es sacrificada o destruida, devuélvela a tu mano/
 /Sirena Unicornio, Unicornio Mágico, Pasar al establo, Cuando esta carta entre en tu Establo, devuelve una carta que se encuentre en el Establo de otro jugador a su mano/
@@ -45,8 +44,7 @@ Si esta carta es sacrificada o destruida, devuélvela a tu mano/
 /Shabby El Narval, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo puedes buscar una carta de Desventaja en el mazo de robo y ponerla en tu mano; a continuación, baraja el mazo de robo/
 /Tiburón Con Cuerno, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo puedes SACRIFICARLA para, a continuación, DESTRUIR un carta de Unicornio/
 /Cuchillocornio, Unicornio Mágico, Pasar al establo, Si esta carta es sacrificada o destruida, puedes DESTRUIR una carta de Unicornio/
-/Unicornio Volador Veloz, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo puedes buscar una carta Relincho en la pila de descartes y ponerla en tu mano.
-Si esta carta es sacrificada o destruida, devuélvela a tu mano/
+/Unicornio Volador Veloz, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo puedes buscar una carta Relincho en la pila de descartes y ponerla en tu mano. Si esta carta es sacrificada o destruida, devuélvela a tu mano/
 /El Gran Narval, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo puedes buscar una carta que contenga la palabra "Narval" en su título y ponerla en tu mano; a continuación, baraja el mazo de robo/
 /Unicornio En La Mazorca, Unicornio Mágico, Pasar al establo, Un unicornio que en vez de cuerno tiene una mazorca, que más necesitas/ 
 /Unicornio Fénix, Unicornio Mágico, Pasar al establo, Un unicornio que renace de las cenizas y sus llamas son muy violentas/
