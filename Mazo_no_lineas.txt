@@ -17,7 +17,7 @@ Bebé Narwhal, Bebé Unicornio, Pasar al establo, Si esta carta es sacrificada, 
 /Unicornio Básico(Naranja), Unicornio Básico, Pasar al establo, El pumpkin spice es la esencia de la vida/
 /Unicornio Básico(Morado), Unicornio Básico, Pasar al establo, Carta de Unicornio Básico #nomakeup #nofilter #gafasdesol #sincomplejos #selfi #unicornio #TGIF #estaesmicrin/
 /Unicornio Básico(Rojo), Unicornio Básico, Pasar al establo, Las barbas están súper en tendencia/
-/Unicornio Básico(Amarillo), Unicornio Básico, Pasar al establo, Baila como si estuvieras sola
+/Unicornio Básico(Amarillo), Unicornio Básico, Pasar al establo, Baila como si estuvieras sola/
 /Narwhal, Unicornio Básico, Pasar al establo, Esta carta no tiene poderes especiales, pero ¡es tan mona...!/
 /Narwhal Seductor, Unicornio Mágico,  Pasar al establo, Cuando esta carta entra en tu Establo puedes HURTAR una carta de Ventaja/
 /Americornio, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo puedes quitar una carta al azar de la mano de otro jugador/
@@ -67,7 +67,7 @@ Bebé Narwhal, Bebé Unicornio, Pasar al establo, Si esta carta es sacrificada, 
 /Doble turno, Ventaja, Descartar, Siempre es un buen momento para hacer trampa/
 /Cola extra, Ventaja, Descartar, ¿Porque no tener dos colas?/
 /Bomba de brillo, Ventaja, Descartar, Encandilar a tus oponentes te dará ventaja/
-Aura de arcoíris, Ventaja, Descartar, Si ya los unicornios son lindos, imaginatelos con una aura de arcoíris/
+/Aura de arcoíris, Ventaja, Descartar, Si ya los unicornios son lindos, imaginatelos con una aura de arcoíris/
 /Melena de arcoíris, Ventaja, Descartar, ¡¿¡¿¡¿¿¡UNICORNIOS CON MELENA?!?!?!?!?/
 /Ritual de invocación, Ventaja, Descartar, Este ritual no tiene nada de malo/
 /Lazo de unicornio, Ventaja, Descartar, Los unicornios temen ser atrapados por este lazo/  
