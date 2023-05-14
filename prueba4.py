@@ -6,7 +6,7 @@ sys.setrecursionlimit(10000000)
 
 # esto abre el archivo que esta en la misma carpeta
 with open("Mazo.txt", "r", encoding="utf-8") as archivo:
-    contenido = archivo.read().rstrip("\n")
+    contenido = archivo.read()
 
 # mazo_global = open("/home/camilo/Downloads/Mazo.txt", encoding="utf-8")
 
@@ -14,7 +14,7 @@ def iniciar_juego():
     """Funcion que inicia el juego"""
     mazo = separar_mazo_matriz(contenido, 0, len(contenido), '', [])
     mano = manos(mazo)
-    return mano
+    return mazo
 
 def separar_mazo_matriz(contenido, indice, largo, texto_actual, texto_secciones):
     '''Funcion que separar el mazo de acuerdo a un caracter separador previamente en el archivo'''
@@ -38,12 +38,8 @@ def remover_saltos_linea(lista_contenido, indice, largo, resultado):
         return remover_saltos_linea(lista_contenido, indice + 1, largo, resultado + [lista_contenido[indice]])
 
 def eliminar_elemento(lista, elemento):
-    ''' Elimina un elemento de una lista
-    '''
-    if type(lista) != list:
-        return 'Error01'
-    else:
-        return eliminar_elemento_aux(lista, elemento, 0, len(lista), [])
+    ''' Elimina un elemento de una lista'''
+    return eliminar_elemento_aux(lista, elemento, 0, len(lista), [])
 
 def eliminar_elemento_aux(lista, elemento, indice, largo, resultado):
     ''' Funcion auxiliar 
