@@ -5,7 +5,7 @@ from pathlib import Path
 sys.setrecursionlimit(10000000)
 
 # esto abre el archivo que esta en la misma carpeta
-with open("Mazo.txt", "r", encoding="utf-8") as archivo:
+with open("Mazo_no_lineas.txt", "r", encoding="utf-8") as archivo:
     contenido = archivo.read()
 
 # mazo_global = open("/home/camilo/Downloads/Mazo.txt", encoding="utf-8")
@@ -33,6 +33,8 @@ def remover_saltos_linea(lista_contenido, indice, largo, resultado):
     elif lista_contenido[indice] == "\n":
         return remover_saltos_linea(lista_contenido, indice + 1, largo, resultado)
     elif lista_contenido[indice] == " \n":
+        return remover_saltos_linea(lista_contenido, indice + 1, largo, resultado)
+    elif lista_contenido[indice] == "  \n":
         return remover_saltos_linea(lista_contenido, indice + 1, largo, resultado)
     else:
         return remover_saltos_linea(lista_contenido, indice + 1, largo, resultado + [lista_contenido[indice]])
