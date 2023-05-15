@@ -8,13 +8,14 @@ sys.setrecursionlimit(10000000)
 with open("Mazo_no_lineas.txt", "r", encoding="utf-8") as archivo:
     contenido = archivo.read()
 
-# mazo_global = open("/home/camilo/Downloads/Mazo.txt", encoding="utf-8")
+#Nota, de este archivo .txt, los unicornios van del 0 al 50, magia del 51 al 65, ventaja del 66 al 73, y desventaja del 74 al 81
+
 
 def iniciar_juego():
     """Funcion que inicia el juego"""
     mazo = separar_mazo_lista(contenido, 0, len(contenido), '', [])
     mano = manos(mazo)
-    return mano
+    return mazo[51]
 
 def separar_mazo_lista(contenido, indice, largo, texto_actual, texto_secciones):
     '''Funcion que separar el mazo de acuerdo a un caracter separador previamente en el archivo'''
