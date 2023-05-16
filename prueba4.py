@@ -15,7 +15,10 @@ def iniciar_juego():
     """Funcion que inicia el juego"""
     mazo = separar_mazo_lista(contenido, 0, len(contenido), '', [])
     mano = manos(mazo)
-    return mazo[51]
+    mazo_nuevo = mano[2]
+    mano1 = mano[0]
+    mano2 = mano[1]
+    return descartar(mano2)
 
 def separar_mazo_lista(contenido, indice, largo, texto_actual, texto_secciones):
     '''Funcion que separar el mazo de acuerdo a un caracter separador previamente en el archivo'''
@@ -65,5 +68,19 @@ def manos(mazo):
     nueva_lista = eliminar_elemento(nueva_lista, mano2[1])
     nueva_lista = eliminar_elemento(nueva_lista, mano2[2])
     return [mano1, mano2, nueva_lista]
+
+def descartar(mano_descartar):
+    '''Funcion que descarta una carta del jugador de manera aleatoria'''
+    numero_aleatorio = random.randint(0, len(mano_descartar) - 1)
+    return descartar_aux(mano_descartar, numero_aleatorio, 0, len(mano_descartar), [])
+
+def descartar_aux(mazo_descartar, numero_aleatorio, indice, largo, mazo_descartado):
+    '''Funcion que trata de descartar aleatoriamente una carta del mazo del jugador rival'''
+    if indice == largo:
+        return mazo_descartado
+    elif indice == numero_aleatorio:
+        return descartar_aux(mazo_descartar, numero_aleatorio, indice + 1, largo, mazo_descartado)
+    else:
+        return descartar_aux(mazo_descartar, numero_aleatorio, indice + 1, largo, mazo_descartado + [mazo_descartar[indice]])
     
 print(iniciar_juego())
