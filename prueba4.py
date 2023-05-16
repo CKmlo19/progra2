@@ -7,10 +7,6 @@ sys.setrecursionlimit(10000000)
 # esto abre el archivo que esta en la misma carpeta
 with open("Mazo_no_lineas.txt", "r", encoding="utf-8") as archivo:
     contenido = archivo.read()
-
-#Nota, de este archivo .txt, los unicornios van del 0 al 50, magia del 51 al 65, ventaja del 66 al 73, y desventaja del 74 al 81
-
-
 def iniciar_juego():
     """Funcion que inicia el juego"""
     mazo = separar_mazo_lista(contenido, 0, len(contenido), '', [])
@@ -68,6 +64,34 @@ def manos(mazo):
     nueva_lista = eliminar_elemento(nueva_lista, mano2[1])
     nueva_lista = eliminar_elemento(nueva_lista, mano2[2])
     return [mano1, mano2, nueva_lista]
+
+def comprobar_tipo(lista, elemento):
+    '''Funcion que comprueba el tipo de una carta'''
+    if type(lista) != list:
+        return "Error01"
+    else:
+        return comprobar_tipo_aux(lista, elemento, 0)
+    
+
+#Nota, de este archivo .txt, los unicornios van del 0 al 50, magia del 51 al 65, ventaja del 66 al 73, y desventaja del 74 al 81
+
+
+def comprobar_tipo_aux(lista, elemento, indice):
+    if indice < 50:
+        if lista[indice] == elemento:
+            return "Unicornio"
+    elif indice < 65:
+        if lista[indice] == elemento:
+            return "Magia"
+    elif indice < 73:
+        if lista[indice] == elemento:
+            return "Ventaja"
+    elif indice < 82:
+        if lista[indice] == elemento:
+            return "Desventaja"
+    
+    if indice < 81:
+        return comprobar_tipo_aux(lista, elemento, indice + 1)
 
 def descartar(mano_descartar):
     '''Funcion que descarta una carta del jugador de manera aleatoria'''
