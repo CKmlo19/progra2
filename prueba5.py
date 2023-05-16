@@ -104,6 +104,8 @@ def comprobar_tipo_aux(lista, elemento, indice):
     if indice < 81:
         return comprobar_tipo_aux(lista, elemento, indice + 1)
     
+
+    
     
 res = comprobar_tipo(mazo, mazo[81])
 print(res)

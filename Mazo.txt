@@ -1,2 +1,11 @@
-Bebé Narwhal, Bebé Unicornio, Pasar al establo/
-/Bebé Unicornio(Negro), Bebé Unicornio, Pasar al establo/
+Bebé Narwhal? Bebé Unicornio? Pasar al establo? Si esta carta es sacrificada, destruida o devuelta a tu mano, déjala en la Guardería/
+/Bebé Unicornio(Negro)? Bebé Unicornio? Pasar al establo? Si esta carta es sacrificada, destruida o devuelta a tu mano, déjala en la Guardería/
+/Bebé Unicornio(Negro), Bebé Unicornio, Pasar al establo, Si esta carta es sacrificada, destruida o devuelta a tu mano, déjala en la Guardería/
+/Bebé Unicornio(Blue), Bebé Unicornio, Pasar al establo, Si esta carta es sacrificada, destruida o devuelta a tu mano, déjala en la Guardería/
+/Bebé Unicornio(Brown), Bebé Unicornio, Pasar al establo, Si esta carta es sacrificada, destruida o devuelta a tu mano, déjala en la Guardería/
+/Bebé Unicornio(Naranja), Bebé Unicornio, Pasar al establo, Si esta carta es sacrificada, destruida o devuelta a tu mano, déjala en la Guardería/
+/Bebé Unicornio(Rosa), Bebé Unicornio, Pasar al establo, Si esta carta es sacrificada, destruida o devuelta a tu mano, déjala en la Guardería/
+/Bebé Unicornio(Morado), Bebé Unicornio, Pasar al establo, Si esta carta es sacrificada, destruida o devuelta a tu mano, déjala en la Guardería/
+/Bebé Unicornio(Arcoiris), Bebé Unicornio, Pasar al establo, Si esta carta es sacrificada, destruida o devuelta a tu mano, déjala en la Guardería/
+
+
