@@ -4,7 +4,7 @@ import random
 sys.setrecursionlimit(10000000)
 
 # esto abre el archivo que esta en la misma carpeta
-with open("Mazo.txt", "r", encoding="utf-8") as archivo:
+with open("Mazo_sin_lineas.txt", "r", encoding="utf-8") as archivo:
     contenido = archivo.read().rstrip("\n")
 
 
