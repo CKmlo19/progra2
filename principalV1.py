@@ -183,7 +183,7 @@ def turnos_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, esta
             print("Haz elegido una carta de magia, por lo que robas una carta adicional del mazo")
             roba = robar(mazo_jugador1, mazo_general)
             return turnos_aux(eliminar_elemento(roba[0], mazo_jugador1[carta]), mazo_jugador2, roba[1], turno + 1, establo1, establo2)
-        else:
+       # else:
             
     else:
         sacar_carta = robar(mazo_jugador2, mazo_general)
@@ -205,7 +205,7 @@ def turnos_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, esta
             print("Haz elegido una carta de magia, por lo que robas una carta adicional del mazo")
             roba = robar(mazo_jugador2, mazo_general)
             return turnos_aux(mazo_jugador1, eliminar_elemento(roba[0], mazo_jugador2[carta]), roba[1], turno - 1, establo1, establo2)
-        else:
+       # else:
             
 
                               
