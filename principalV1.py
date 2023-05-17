@@ -167,7 +167,7 @@ def turnos_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, esta
         sacar_carta = robar(mazo_jugador1, mazo_general)
         mazo_jugador1 = sacar_carta[0]
         mazo_general = sacar_carta[1]
-        carta = input(f"Es el turno del jugador 1, estas son tus cartas: {mazo_jugador1}, presiona el numero de cual quieres utilizar (primera, segunda, tercera...): " )
+        carta = input(f"Es el turno del jugador 1, estas son tus cartas: \n{mazo_jugador1}, presiona el numero de cual quieres utilizar (primera, segunda, tercera...): " ) #ligero salto de linea para que se vean mejor las cartas
         carta = int(carta)
         carta = carta - 1
         if comprobar_tipo(mazo, mazo_jugador1[carta]) == "Unicornio":
@@ -189,7 +189,7 @@ def turnos_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, esta
         sacar_carta = robar(mazo_jugador2, mazo_general)
         mazo_jugador2 = sacar_carta[0]
         mazo_general = sacar_carta[1]
-        carta = input(f"Es el turno del jugador 2, estas son tus cartas: {mazo_jugador2}, presiona el numero de cual quieres utilizar (primera, segunda, tercera...): " )
+        carta = input(f"Es el turno del jugador 2, estas son tus cartas: \n{mazo_jugador2}, presiona el numero de cual quieres utilizar (primera, segunda, tercera...): " ) #ligero salto de linea para que se vean mejor las cartas
         carta = int(carta)
         carta = carta - 1
         if comprobar_tipo(mazo, mazo_jugador2[carta]) == "Unicornio":
