@@ -1,0 +1,84 @@
+Bebé Narwhal, Bebé Unicornio, Pasar al establo, Si esta carta es sacrificada, destruida o devuelta a tu mano, déjala en la Guardería/
+/Bebé Unicornio(Negro), Bebé Unicornio, Pasar al establo, Si esta carta es sacrificada, destruida o devuelta a tu mano, déjala en la Guardería/
+/Bebé Unicornio(Blue), Bebé Unicornio, Pasar al establo, Si esta carta es sacrificada, destruida o devuelta a tu mano, déjala en la Guardería/
+/Bebé Unicornio(Brown), Bebé Unicornio, Pasar al establo, Si esta carta es sacrificada, destruida o devuelta a tu mano, déjala en la Guardería/
+/Bebé Unicornio(Muerte), Bebé Unicornio, Pasar al establo, Si esta carta es sacrificada, destruida o devuelta a tu mano, déjala en la Guardería/
+/Bebé Unicornio(Verde), Bebé Unicornio, Pasar al establo, Si esta carta es sacrificada, destruida o devuelta a tu mano, déjala en la Guardería/
+/Bebé Unicornio(Naranja), Bebé Unicornio, Pasar al establo, Si esta carta es sacrificada, destruida o devuelta a tu mano, déjala en la Guardería/
+/Bebé Unicornio(Rosa), Bebé Unicornio, Pasar al establo, Si esta carta es sacrificada, destruida o devuelta a tu mano, déjala en la Guardería/
+/Bebé Unicornio(Morado), Bebé Unicornio, Pasar al establo, Si esta carta es sacrificada, destruida o devuelta a tu mano, déjala en la Guardería/
+/Bebé Unicornio(Arcoiris), Bebé Unicornio, Pasar al establo, Si esta carta es sacrificada, destruida o devuelta a tu mano, déjala en la Guardería/
+/Bebé Unicornio(Rojo), Bebé Unicornio, Pasar al establo, Si esta carta es sacrificada, destruida o devuelta a tu mano, déjala en la Guardería/
+/Bebé Unicornio(Amarillo), Bebé Unicornio, Pasar al establo, Si esta carta es sacrificada, destruida o devuelta a tu mano, déjala en la Guardería/
+/Bebé Unicornio(Blanco), Bebé Unicornio, Pasar al establo, Si esta carta es sacrificada, destruida o devuelta a tu mano, déjala en la Guardería/
+/Unicornio Básico(Azul), Unicornio Básico, Pasar al establo, Los cuellos alzados son solo para las citas/
+/Unicornio Básico(Verde), Unicornio Básico, Pasar al establo, Solo escucho discos de vinilo y cintas de casete/
+/Unicornio Básico(Indigo), Unicornio Básico, Pasar al establo, Carta da Unicornio Básico 💖🙌💅🙌💖💁💁😂😂😂/
+/Unicornio Básico(Naranja), Unicornio Básico, Pasar al establo, El pumpkin spice es la esencia de la vida/
+/Unicornio Básico(Morado), Unicornio Básico, Pasar al establo, Carta de Unicornio Básico #nomakeup #nofilter #gafasdesol #sincomplejos #selfi #unicornio #TGIF #estaesmicrin/
+/Unicornio Básico(Rojo), Unicornio Básico, Pasar al establo, Las barbas están súper en tendencia/
+/Unicornio Básico(Amarillo), Unicornio Básico, Pasar al establo, Baila como si estuvieras sola/
+/Narwhal, Unicornio Básico, Pasar al establo, Esta carta no tiene poderes especiales, pero ¡es tan mona...!/
+/Narwhal Seductor, Unicornio Mágico,  Pasar al establo, Cuando esta carta entra en tu Establo puedes HURTAR una carta de Ventaja/
+/Americornio, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo puedes quitar una carta al azar de la mano de otro jugador/
+/Unicornio Ángel, Unicornio Mágico, Pasar al establo, Si esta carta se encuentra en tu Establo al inicio de tu turno, puedes SACRIFICAR esta carta para, a continuación, poner una carta de Unicornio de la pila de descartes en tu Establo/
+/Unicornio Volador Molesto, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo puedes obligar a otro jugador a DESCARTAR una carta. Si esta carta es sacrificada o destruida, devuélvela a tu mano/
+/Unicornio Caballero Negro, Unicornio Mágico, Pasar al establo, Puedes SACRIFICAR esta carta en lugar de destruir una carta de Unicornio en tu Establo/
+/Unicornio Motosierra, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo puedes DESTRUIR una carta de Ventaja o SACRIFICAR una carta de Desventaja/
+/Narval Con Clase, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo puedes buscar una carta de Ventaja en el mazo de robo y ponerla en tu mano; a continuación, baraja el mazo de robo/
+/Unicornio Extremadamente Destructivo, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo cada jugador (también tú) debe SACRIFICAR una carta de Unicornio/
+/Unicornio Extremadamente Fértil, Unicornio Mágico, Pasar al establo, Si esta carta se encuentra en tu Establo al inicio de tu turno, puedes DESCARTAR una carta para, a continuación, poner un Bebé unicornio de la Guardería en tu Establo/
+/Unicornio Gigante, Unicornio Mágico, Pasar al establo, Esta carta cuenta como 2 cartas de Unicornio. No puedes jugar carta Relincho de ningún tipo/
+/Unicornio Volador Codicioso, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo, ROBA una carta. Si esta carta es sacrificada o destruida, devuélvela a tu mano/
+/Llamacornio, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo cada jugador (también tú) debe DESCARTAR una carta/
+/Unicornio Volador Mágico, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo puedes buscar una carta de Magia en la pila de descartes y ponerla en tu mano. Si esta carta es sacrificada o destruida, devuélvela a tu mano/
+/Gatitocornio Mágico, Unicornio Mágico, Pasar al establo, Esta carta no puede ser destruida por cartas de Magia/
+/Unicornio Volador Magestuoso, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo puedes buscar una carta de Unicornio en la pila de descartes y ponerla en tu mano. Si esta carta es sacrificada o destruida, devuélvela a tu mano/
+/Sirena Unicornio, Unicornio Mágico, Pasar al establo, Cuando esta carta entre en tu Establo, devuelve una carta que se encuentre en el Establo de otro jugador a su mano/
+/Torpedo Narval, Unicornio Mágico, Pasar al establo, Cuando esta carta entre en tu Establo, SACRIFICA todas las cartas de Desventaja que tengas en tu Establo/
+/Perrito Cornio, Unicornio Mágico, Pasar al establo, Cada vez que un jugador comience su turno, mueve esta carta al establo de ese jugador. Esta carta no puede ser sacrificada ni destruida/
+/Abeja Reina Unicornio, Unicornio Mágico, Pasar al establo, Los Unicornios básicos no pueden entrar en ningún Establo que no sea el tuyo/
+/Unicornio Arcoiris, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo también puedes poner una carta de Unicornio básico de tu mano en tu Establo/
+/Rinocornio, Unicornio Mágico, Pasar al establo, Si esta carta se encuentra en tu Establo al inicio de tu turno, puedes DESTRUIR una carta de Unicornio. Si lo haces, tu turno termina de inmediato/
+/Unicornio Seductor, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo puedes DESCARTAR una carta para, a continuación, HURTAR una carta de Unicornio/
+/Shabby El Narval, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo puedes buscar una carta de Desventaja en el mazo de robo y ponerla en tu mano; a continuación, baraja el mazo de robo/
+/Tiburón Con Cuerno, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo puedes SACRIFICARLA para, a continuación, DESTRUIR un carta de Unicornio/
+/Cuchillocornio, Unicornio Mágico, Pasar al establo, Si esta carta es sacrificada o destruida, puedes DESTRUIR una carta de Unicornio/
+/Unicornio Volador Veloz, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo puedes buscar una carta Relincho en la pila de descartes y ponerla en tu mano. Si esta carta es sacrificada o destruida, devuélvela a tu mano/
+/El Gran Narval, Unicornio Mágico, Pasar al establo, Cuando esta carta entra en tu Establo puedes buscar una carta que contenga la palabra "Narval" en su título y ponerla en tu mano; a continuación, baraja el mazo de robo/
+/Unicornio En La Mazorca, Unicornio Mágico, Pasar al establo, Un unicornio que en vez de cuerno tiene una mazorca, que más necesitas/ 
+/Unicornio Fénix, Unicornio Mágico, Pasar al establo, Un unicornio que renace de las cenizas y sus llamas son muy violentas/
+/Unicornio zombi, Unicornio Mágico, Pasar al establo, Ni la muerte le pudo ganar a este unicornio/
+/Intercambio de unicornios, Magia, Robar, ¿Intercambiamos?/
+/Reductor de unicornios, Magia, Robar, ¿Es posible un unicornio más adorable?/
+/Veneno para unicornio, Magia, Robar, No se sabe que cruel ser lo creó/
+/Trato injusto, Magia, Robar, Los tratos son la puerta para el deséxito/
+/Dos por uno, Magia, Robar, Como dicen por ahí: "Dos unicornios de un tiro"/
+/Destrucción dirigida, Magia, Robar, Su nivel de destrucción se compara a una bomba nuclear/
+/Agitar, Magia, Robar, No lo agites demasiado que si no explota/
+/Botón de reinicio, Magia, Robar, ¿Y si empezamos de nuevo?/
+/Reapuntar, Magia, Robar, Para lanzar de gran forma un unicornio debemos apuntar correctamente/
+/Vórtice Místico, Magia, Robar, El triángulo de las Bermudas es un juego en comparación con este vórtice/
+/Buen trato, Magia, Robar, Los tratos son la puerta para el éxito/
+/Cambio de suerte, Magia, Robar, La suerte gana partidas/
+/Tornado brillante, Magia, Robar, Un tornado con colores es el mejor desastre natural/
+/Ladrón descarado, Magia, Robar, ¿Qué es más descarado que robar?/
+/Retroceso, Magia, Robar, ¡¡Atrás!!/
+/Doble turno, Ventaja, Descartar, Siempre es un buen momento para hacer trampa/
+/Cola extra, Ventaja, Descartar, ¿Porque no tener dos colas?/
+/Bomba de brillo, Ventaja, Descartar, Encandilar a tus oponentes te dará ventaja/
+/Aura de arcoíris, Ventaja, Descartar, Si ya los unicornios son lindos, imaginatelos con una aura de arcoíris/
+/Melena de arcoíris, Ventaja, Descartar, ¡¿¡¿¡¿¿¡UNICORNIOS CON MELENA?!?!?!?!?/
+/Ritual de invocación, Ventaja, Descartar, Este ritual no tiene nada de malo/
+/Lazo de unicornio, Ventaja, Descartar, Los unicornios temen ser atrapados por este lazo/  
+/YAY, Ventaja, Descartar, Uninicornio feliz, vida feliz/
+/Cable de espino, Desventaja, Sacrificar, Nadie quiere ver a un unicornio sufriendo en estos cables/
+/Luz cegadora, Desventaja, Sacrificar, La luz del sol esta muy fuerte/
+/Establo roto, Desventaja, Sacrificar, El establo está roto, todos los unicornios escaparon ¡AYUDAA!/ 
+/Cámara de niñera, Desventaja, Sacrificar, Cualquier movimiento esta siendo grabado/
+/Pandamonium, Desventaja, Sacrificar, ¿¡¿¡¿¡ DE DONDE #¡$^& SALIERON PANDAS ?!?!?!/
+/Ritual sádico, Desventaja, Sacrificar, Prometemos que los unicornios involucrados estan bien/
+/Desacelerar, Desventaja, Sacrificar, Los unicornios también tienen limites de velocidad/ 
+/Establo pequeño, Desventaja, Sacrificar, Los unicornios estan un poco incómodos/
+
+
