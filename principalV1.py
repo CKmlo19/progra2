@@ -1,7 +1,6 @@
 import os 
 import sys
 import random
-from pathlib import Path
 sys.setrecursionlimit(10000000)
 
 # esto abre el archivo que esta en la misma carpeta
