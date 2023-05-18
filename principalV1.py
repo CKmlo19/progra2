@@ -42,6 +42,8 @@ def remover_saltos_linea(lista_contenido, indice, largo, resultado):
         return remover_saltos_linea(lista_contenido, indice + 1, largo, resultado)
     elif lista_contenido[indice] == " \n":
         return remover_saltos_linea(lista_contenido, indice + 1, largo, resultado)
+    elif lista_contenido[indice] == "  \n":
+        return remover_saltos_linea(lista_contenido, indice + 1, largo, resultado)
     else:
         return remover_saltos_linea(lista_contenido, indice + 1, largo, resultado + [lista_contenido[indice]])
 

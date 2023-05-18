@@ -3,8 +3,10 @@ import sys
 import random
 sys.setrecursionlimit(10000000)
 
+azul = "\033[94m"
 rojo_negrita = "\033[1;91m"
 resetear = "\033[0m"
+
 
 # esto abre el archivo que esta en la misma carpeta
 with open("Mazo_sin_lineas.txt", "r", encoding="utf-8") as archivo:
@@ -162,6 +164,7 @@ def turnos(jugador1, jugador2, mazo_general):
         return turnos_aux(jugador1, jugador2, mazo_general, 0, [], [])
 
 def turnos_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2):
+    print(establo1, establo2)
     if len(mazo_general) == 0:
         return "El mazo se ha quedado sin cartas! La partida queda en empate"
     elif len(establo1) == 5:
@@ -184,11 +187,12 @@ def turnos_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, esta
         carta = input(f"Es el turno del jugador 2, estas son tus cartas: \n{mazo_jugador2}, presiona el numero de cual quieres utilizar (primera, segunda, tercera...): " ) #ligero salto de linea para que se vean mejor las cartas
         carta = int(carta)
         carta -= 1
+        print(carta)
         return jugador2(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta)
     
 def jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta):
     '''Funcion que sirve para rellamar en caso de que el jugador selecciona un indice invalido'''
-    if 0 <= carta < len(mazo_jugador1) - 1:
+    if 0 <= carta <= len(mazo_jugador1) - 1:
             return jugador1_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta)
     else:
         print("Carta invalida!")
@@ -215,7 +219,7 @@ def jugador1_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, es
     
 def jugador2(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta):
     '''Funcion que sirve para rellamar en caso de que el jugador selecciona un indice invalido'''
-    if 0 <= carta < len(mazo_jugador2) - 1:
+    if 0 <= carta <= len(mazo_jugador2) - 1:
             return jugador2_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta)
     else:
         print("Carta invalida!")
