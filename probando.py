@@ -3,6 +3,9 @@ import sys
 import random
 sys.setrecursionlimit(10000000)
 
+rojo_negrita = "\033[1;91m"
+resetear = "\033[0m"
+
 # esto abre el archivo que esta en la misma carpeta
 with open("Mazo_sin_lineas.txt", "r", encoding="utf-8") as archivo:
     contenido = archivo.read().rstrip("\n")
@@ -173,11 +176,7 @@ def turnos_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, esta
         carta = int(carta)
         carta -= 1
         print(carta)
-        if 0 <= carta < len(mazo_jugador1) - 1:
-            return jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta)
-        else:
-            print("Carta invalida, por favor selecciona un numero valido")
-            return turnos_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2)
+        return jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta)
     else:
         sacar_carta = robar(mazo_jugador2, mazo_general)
         mazo_jugador2 = sacar_carta[0]
@@ -185,13 +184,20 @@ def turnos_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, esta
         carta = input(f"Es el turno del jugador 2, estas son tus cartas: \n{mazo_jugador2}, presiona el numero de cual quieres utilizar (primera, segunda, tercera...): " ) #ligero salto de linea para que se vean mejor las cartas
         carta = int(carta)
         carta -= 1
-        if 0 <= carta < len(mazo_jugador1) - 1:
-            return jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta)
-        else:
-            print("Carta invalida, por favor selecciona un numero valido")
-            return turnos_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2)
-        
+        return jugador2(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta)
+    
 def jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta):
+    '''Funcion que sirve para rellamar en caso de que el jugador selecciona un indice invalido'''
+    if 0 <= carta < len(mazo_jugador1) - 1:
+            return jugador1_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta)
+    else:
+        print("Carta invalida!")
+        carta = input(rojo_negrita + "Por favor selecciona un numero valido: " + resetear)
+        carta = int(carta)
+        carta -= 1
+        return jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta)
+        
+def jugador1_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta):
     '''Funcion que crea el juego del jugador1'''
     if comprobar_tipo(mazo, mazo_jugador1[carta]) == "Unicornio":
         print("Haz pasado un unicornio al establo")
@@ -206,8 +212,20 @@ def jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establ
         print("Haz elegido una carta de magia, por lo que robas una carta adicional del mazo")
         roba = robar(mazo_jugador1, mazo_general)
         return turnos_aux(eliminar_elemento(roba[0], mazo_jugador1[carta]), mazo_jugador2, roba[1], turno + 1, establo1, establo2)
-
+    
 def jugador2(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta):
+    '''Funcion que sirve para rellamar en caso de que el jugador selecciona un indice invalido'''
+    if 0 <= carta < len(mazo_jugador2) - 1:
+            return jugador2_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta)
+    else:
+        print("Carta invalida!")
+        carta = input(rojo_negrita + "Por favor selecciona un numero valido: " + resetear)
+        carta = int(carta)
+        carta -= 1
+        return jugador2(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta)
+
+
+def jugador2_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta):
     '''Funcion que crea el juego del jugador2'''
     if comprobar_tipo(mazo, mazo_jugador2[carta]) == "Unicornio":
         print("Haz pasado un unicornio al establo")
