@@ -5,6 +5,7 @@ sys.setrecursionlimit(10000000)
 
 azul = "\033[94m"
 rojo_negrita = "\033[1;91m"
+azul_negrita = "\033[94;1m"
 azul_subrayado = "\033[94;4m"
 verde_subrayado = "\033[4;92m"
 resetear = "\033[0m"
@@ -20,9 +21,14 @@ def iniciar_juego():
     mano1 = manos(mazo)[0]
     mano2 = manos(mazo)[1]
     nuevo_mazo = manos(mazo)[2]
-    input('''Bienvenido al juego de unicornios inestables!
-             Presiona una tecla para empezar: ''')
-    return turnos(mano1, mano2, nuevo_mazo)
+    print('Bienvenido al juego de unicornios inestables!')
+    ver_instrucciones = input("\nPresiona la tecla " + azul_negrita +  "1" + resetear + " para ver las instrucciones completas. \nPresiona " + azul_negrita + "cualquier otra tecla" + resetear + " para jugar: ")
+    if ver_instrucciones == "1":
+        print("Las instrucciones son estas: ")
+        print("")
+
+    else:
+        return turnos(mano1, mano2, nuevo_mazo)
 
 def separar_mazo_matriz_aux(texto):
     '''Funcion auxiliar'''
@@ -180,35 +186,36 @@ def turnos_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, esta
         mazo_general = sacar_carta[1]
         print("\n====> Es el turno del " + azul_subrayado + "jugador 1" + resetear + " estas son tus cartas:")
         print(f"\n{mazo_jugador1}")
-        carta = input("\nPresiona el numero de cual quieres utilizar (primera, segunda, tercera...): " ) #ligero salto de linea para que se vean mejor las cartas
-        carta = int(carta)
-        carta -= 1
-        print(carta)
-        return jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta)
+        return verificar_carta_jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2)
     else:
         sacar_carta = robar(mazo_jugador2, mazo_general)
         mazo_jugador2 = sacar_carta[0]
         mazo_general = sacar_carta[1]
         print("\n====> Es el turno del " + verde_subrayado + "jugador 2" + resetear + " estas son tus cartas:")
         print(f"\n{mazo_jugador1}")
-        carta = input("\nPresiona el numero de cual quieres utilizar (primera, segunda, tercera...): " ) #ligero salto de linea para que se vean mejor las cartas
-        carta = int(carta)
-        carta -= 1
-        print(carta)
-        return jugador2(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta)
-    
-def jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta):
-    '''Funcion que sirve para rellamar en caso de que el jugador selecciona un indice invalido'''
-    if 0 <= carta <= len(mazo_jugador1) - 1:
-            return jugador1_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta)
-    else:
-        print("Carta invalida!")
-        carta = input(rojo_negrita + "Por favor selecciona un numero valido: " + resetear)
-        carta = int(carta)
-        carta -= 1
-        return jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta)
+        return verificar_carta_jugador2(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2)
         
-def jugador1_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta):
+
+def verificar_carta_jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2):
+    '''Funcion que sirve para rellamar en caso de que el jugador selecciona un indice invalido'''
+    carta = input("\nPresiona el numero de cual quieres utilizar (primera, segunda, tercera...): " )
+    if len(carta) != 1:
+        print(rojo_negrita + "Error, por favor selecciona solamente numeros [1,2,3,...]" + resetear)
+        return verificar_carta_jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2)
+    elif 49 <= ord(carta) <= 54:
+        carta = int(carta)
+        carta -= 1
+        if 0 <= carta <= len(mazo_jugador1) - 1:
+            return acciones_jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta)
+        else:
+            print("Carta invalida!")
+            print(rojo_negrita + "Por favor selecciona selecciona un numero que esta entre las cartas" + resetear)
+            return verificar_carta_jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2)
+    else:
+        print(rojo_negrita + "Error, por favor selecciona solamente numeros [1,2,3,...]" + resetear)
+        return verificar_carta_jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2)
+        
+def acciones_jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta):
     '''Funcion que crea el juego del jugador1'''
     if comprobar_tipo(mazo, mazo_jugador1[carta]) == "Unicornio":
         print("Haz pasado un unicornio al establo")
@@ -224,19 +231,27 @@ def jugador1_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, es
         roba = robar(mazo_jugador1, mazo_general)
         return turnos_aux(eliminar_elemento(roba[0], mazo_jugador1[carta]), mazo_jugador2, roba[1], turno + 1, establo1, establo2)
     
-def jugador2(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta):
+def verificar_carta_jugador2(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2):
     '''Funcion que sirve para rellamar en caso de que el jugador selecciona un indice invalido'''
-    if 0 <= carta <= len(mazo_jugador2) - 1:
-            return jugador2_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta)
-    else:
-        print("Carta invalida!")
-        carta = input(rojo_negrita + "Por favor selecciona un numero valido: " + resetear)
+    carta = input("\nPresiona el numero de cual quieres utilizar (primera, segunda, tercera...): " )
+    if len(carta) != 1:
+        print(rojo_negrita + "Error, por favor selecciona solamente numeros [1,2,3,...]" + resetear)
+        return verificar_carta_jugador2(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2)
+    elif 49 <= ord(carta) <= 54:
         carta = int(carta)
         carta -= 1
-        return jugador2(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta)
+        if 0 <= carta <= len(mazo_jugador2) - 1:
+            return acciones_jugador2(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta)
+        else:
+            print("Carta invalida!")
+            print(rojo_negrita + "Por favor selecciona selecciona un numero que esta entre las cartas" + resetear)
+            return verificar_carta_jugador2(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2)
+    else:
+        print(rojo_negrita + "Error, por favor selecciona solamente numeros [1,2,3,...]" + resetear)
+        return verificar_carta_jugador2(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2)
 
 
-def jugador2_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta):
+def acciones_jugador2(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta):
     '''Funcion que crea el juego del jugador2'''
     if comprobar_tipo(mazo, mazo_jugador2[carta]) == "Unicornio":
         print("Haz pasado un unicornio al establo")
