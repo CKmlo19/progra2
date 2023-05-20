@@ -250,7 +250,7 @@ def acciones_jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo
         return turnos_aux(eliminar_elemento(mazo_jugador1, mazo_jugador1[carta]), mazo_jugador2, mazo_general, turno + 1, establo1 + [mazo_jugador1[carta]], establo2)
     elif comprobar_tipo(mazo, mazo_jugador1[carta]) == "Ventaja":
         print("\nHaz hecho que el rival descarte un carta!")
-        print("Por lo que el mazo del rival seria el siguiente: \n")
+        print("Por lo que la mano del rival seria el siguiente: \n")
         print(descartar(mazo_jugador2))
         return turnos_aux(mazo_jugador1, descartar(mazo_jugador2), mazo_general, turno + 1, establo1, establo2)
     elif comprobar_tipo(mazo, mazo_jugador1[carta]) == "Desventaja":
