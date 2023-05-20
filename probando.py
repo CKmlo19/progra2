@@ -5,6 +5,8 @@ sys.setrecursionlimit(10000000)
 
 azul = "\033[94m"
 rojo_negrita = "\033[1;91m"
+azul_subrayado = "\033[94;4m"
+verde_subrayado = "\033[4;92m"
 resetear = "\033[0m"
 
 
@@ -98,6 +100,7 @@ def comprobar_tipo(lista, elemento):
 
 
 def comprobar_tipo_aux(lista, elemento, indice):
+    '''Funcion que comprueba el tipo de carta'''
     if indice < 50:
         if lista[indice] == elemento:
             return "Unicornio"
@@ -164,7 +167,7 @@ def turnos(jugador1, jugador2, mazo_general):
         return turnos_aux(jugador1, jugador2, mazo_general, 0, [], [])
 
 def turnos_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2):
-    print(establo1, establo2)
+    '''Funcion que controla los turnos con una bandera'''
     if len(mazo_general) == 0:
         return "El mazo se ha quedado sin cartas! La partida queda en empate"
     elif len(establo1) == 5:
@@ -175,7 +178,9 @@ def turnos_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, esta
         sacar_carta = robar(mazo_jugador1, mazo_general)
         mazo_jugador1 = sacar_carta[0]
         mazo_general = sacar_carta[1]
-        carta = input(f"Es el turno del jugador 1, estas son tus cartas: \n{mazo_jugador1}, presiona el numero de cual quieres utilizar (primera, segunda, tercera...): " ) #ligero salto de linea para que se vean mejor las cartas
+        print("\n====> Es el turno del " + azul_subrayado + "jugador 1" + resetear + " estas son tus cartas:")
+        print(f"\n{mazo_jugador1}")
+        carta = input("\nPresiona el numero de cual quieres utilizar (primera, segunda, tercera...): " ) #ligero salto de linea para que se vean mejor las cartas
         carta = int(carta)
         carta -= 1
         print(carta)
@@ -184,7 +189,9 @@ def turnos_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, esta
         sacar_carta = robar(mazo_jugador2, mazo_general)
         mazo_jugador2 = sacar_carta[0]
         mazo_general = sacar_carta[1]
-        carta = input(f"Es el turno del jugador 2, estas son tus cartas: \n{mazo_jugador2}, presiona el numero de cual quieres utilizar (primera, segunda, tercera...): " ) #ligero salto de linea para que se vean mejor las cartas
+        print("\n====> Es el turno del " + verde_subrayado + "jugador 2" + resetear + " estas son tus cartas:")
+        print(f"\n{mazo_jugador1}")
+        carta = input("\nPresiona el numero de cual quieres utilizar (primera, segunda, tercera...): " ) #ligero salto de linea para que se vean mejor las cartas
         carta = int(carta)
         carta -= 1
         print(carta)
