@@ -27,10 +27,10 @@ def iniciar_juego():
     ver_instrucciones = input("\nPresiona la tecla " + azul_negrita +  "1" + resetear + " para ver las instrucciones completas. \nPresiona " + azul_negrita + "cualquier otra tecla" + resetear + " para jugar: ")
     if ver_instrucciones == "1":
         print("Las instrucciones son estas: ")
-        print("\nEste juego se ejecuta mediante lineas de comandos, las acciones se ejecutaran mediante palabras claves dichas a continuacion:")
-        print("\n1. Cuando sea tu turno, digita exactamente " + morado_negrita + "mazo" + resetear + " para mostrar el mazo actual")
-        print("2. Digita la palabra " + morado_negrita +  "mano" + resetear + " para ver la mano actual de tu rival")
-        print("3. Para ver tu establo, digita " + morado_negrita + "establo1" + resetear +  " para ver el establo de tu rival, digita" + morado_negrita + " establo2" + resetear)
+        print("\nEste juego se ejecuta mediante lineas de comandos, las acciones se ejecutaran mediante palabras claves que deben ser escritas exactamente: ")
+        print("\n1. Cuando sea tu turno, digita " + morado_negrita + "mazo" + resetear + " para mostrar el mazo actual")
+        print("2. Si quieres ver la mano y establo del jugador 2, Digita:  " + morado_negrita +  "rival" + resetear + " para ver la mano actual de tu rival")
+        # print("3. Para ver tu establo, digita " + morado_negrita + "establo1" + resetear +  " para ver el establo de tu rival, digita" + morado_negrita + " establo2" + resetear)
         input("\nDigita cualquier tecla para continuar: ")
         return turnos(mano1, mano2, nuevo_mazo)
     else:
@@ -46,7 +46,6 @@ def separar_mazo_matriz_aux(texto):
 def separar_mazo_matriz(contenido, indice, largo, texto_actual, texto_secciones):
     '''Funcion que separar el mazo de acuerdo a un caracter separador previamente en el archivo'''
     if indice == largo:
-        # return texto_secciones
         return remover_saltos_linea(texto_secciones, 0, len(texto_secciones), [])
     elif contenido[indice] == "/":
         return separar_mazo_matriz(contenido, indice + 1, largo, '', texto_secciones + [texto_actual])
@@ -193,6 +192,8 @@ def turnos_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, esta
         mazo_general = sacar_carta[1]
         print("\n====> Es el turno del " + azul_subrayado + "jugador 1" + resetear + " estas son tus cartas:")
         print(f"\n{mazo_jugador1}")
+        print("\nEste es tu establo actual: ")
+        print(f"\n{establo1}")
         return verificar_carta_jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2)
     else:
         sacar_carta = robar(mazo_jugador2, mazo_general)
@@ -207,12 +208,19 @@ def verificar_carta_jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, 
     '''Funcion que sirve para rellamar en caso de que el jugador selecciona un indice invalido'''
     carta = input("\nPresiona el numero de cual quieres utilizar (primera, segunda, tercera...): " )
     if carta == "mazo":
-        print("Este es el mazo: \n")
-        print(mazo_general)
+        print("Este es el mazo: ")
+        print(f"\n{mazo_general}")
         print("\nEstas son tus cartas: ")
-        print(mazo_jugador1)
+        print(f"\n{mazo_jugador1}")
+        print("\nEste es tu establo actual: ")
+        print(f"\n{establo1}")
         return verificar_carta_jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2)
-    if len(carta) != 1:
+    elif carta == "rival":
+        print("\nEsta es la mano y establo del rival: ")
+        print(azul_negrita + "\nMazo: " + resetear, mazo_jugador2)
+        print(azul_negrita + "\nEstablo: " + resetear, establo2)
+        return verificar_carta_jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2)
+    elif len(carta) != 1:
         print(rojo_negrita + "Error, por favor selecciona solamente numeros [1,2,3,...]" + resetear)
         return verificar_carta_jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2)
     elif 49 <= ord(carta) <= 54:
@@ -230,10 +238,10 @@ def verificar_carta_jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, 
         
 def acciones_jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta):
     '''Funcion que crea el juego del jugador1'''
-    print("Jugaste esta carta " + verde_negrita + mazo_jugador1[carta] + resetear)
+    print("Jugaste esta carta: " + verde_negrita + mazo_jugador1[carta] + resetear)
     if comprobar_tipo(mazo, mazo_jugador1[carta]) == "Unicornio":
-        print("Haz pasado un unicornio al establo")
-        print(establo1)
+        print("Haz pasado un unicornio al establo!")
+        print(f"Tu establo se actualizo: {establo1 + [mazo_jugador1[carta]]}")
         return turnos_aux(eliminar_elemento(mazo_jugador1, mazo_jugador1[carta]), mazo_jugador2, mazo_general, turno + 1, establo1 + [mazo_jugador1[carta]], establo2)
     elif comprobar_tipo(mazo, mazo_jugador1[carta]) == "Ventaja":
         print("Haz hecho que el rival descarte un carta!")
@@ -249,7 +257,20 @@ def acciones_jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo
 def verificar_carta_jugador2(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2):
     '''Funcion que sirve para rellamar en caso de que el jugador selecciona un indice invalido'''
     carta = input("\nPresiona el numero de cual quieres utilizar (primera, segunda, tercera...): " )
-    if len(carta) != 1:
+    if carta == "mazo":
+        print("Este es el mazo: ")
+        print(f"\n{mazo_general}")
+        print("\nEstas son tus cartas: ")
+        print(f"\n{mazo_jugador2}")
+        print("\nEste es tu establo actual: ")
+        print(f"\n{establo2}")
+        return verificar_carta_jugador2(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2)
+    elif carta == "rival":
+        print("Esta es la mano y establo del rival: ")
+        print(azul_negrita + "Mazo: " + resetear, mazo_jugador1)
+        print(azul_negrita + "\nEstablo: " + resetear, establo1)
+        return verificar_carta_jugador2(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2)
+    elif len(carta) != 1:
         print(rojo_negrita + "Error, por favor selecciona solamente numeros [1,2,3,...]" + resetear)
         return verificar_carta_jugador2(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2)
     elif 49 <= ord(carta) <= 54:
@@ -268,7 +289,7 @@ def verificar_carta_jugador2(mazo_jugador1, mazo_jugador2, mazo_general, turno, 
 
 def acciones_jugador2(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta):
     '''Funcion que crea el juego del jugador2'''
-    print("Jugaste esta carta " + verde_negrita + mazo_jugador2[carta] + resetear)
+    print("Jugaste esta carta: " + verde_negrita + mazo_jugador2[carta] + resetear)
     if comprobar_tipo(mazo, mazo_jugador2[carta]) == "Unicornio":
         print("Haz pasado un unicornio al establo")
         return turnos_aux(mazo_jugador1, eliminar_elemento(mazo_jugador2, mazo_jugador2[carta]), mazo_general, turno - 1, establo1, establo2 + [mazo_jugador2[carta]])
