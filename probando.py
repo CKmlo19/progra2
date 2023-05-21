@@ -114,13 +114,13 @@ def comprobar_tipo(lista, elemento):
 
 def comprobar_tipo_aux(lista, elemento, indice):
     '''Funcion que comprueba el tipo de carta'''
-    if indice < 50:
+    if indice < 51:
         if lista[indice] == elemento:
             return "Unicornio"
-    elif indice < 65:
+    elif indice < 66:
         if lista[indice] == elemento:
             return "Magia"
-    elif indice < 73:
+    elif indice < 74:
         if lista[indice] == elemento:
             return "Ventaja"
     elif indice < 82:
@@ -132,6 +132,8 @@ def comprobar_tipo_aux(lista, elemento, indice):
 
 def descartar(mano_descartar):
     '''Funcion que descarta una carta del jugador de manera aleatoria'''
+    if mano_descartar == []:
+        return []
     numero_aleatorio = random.randint(0, len(mano_descartar) - 1)
     return descartar_aux(mano_descartar, numero_aleatorio, 0, len(mano_descartar), [])
 
@@ -250,9 +252,20 @@ def acciones_jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo
         return turnos_aux(eliminar_elemento(mazo_jugador1, mazo_jugador1[carta]), mazo_jugador2, mazo_general, turno + 1, establo1 + [mazo_jugador1[carta]], establo2)
     elif comprobar_tipo(mazo, mazo_jugador1[carta]) == "Ventaja":
         print("\nHaz hecho que el rival descarte un carta!")
-        print("Por lo que la mano del rival seria el siguiente: \n")
-        print(descartar(mazo_jugador2))
-        return turnos_aux(mazo_jugador1, descartar(mazo_jugador2), mazo_general, turno + 1, establo1, establo2)
+        descartar_input = input("Digite mano para hacer que el rival descarte una carta de su mano o establo para hacer que el rival descarte una carta de su establo: ")
+        if descartar_input == "establo":
+            print("El rival ha descartado una carta de su establo!: ")
+            print("El establo rival se actualizo: ")
+            print(descartar(establo2))
+            return turnos_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno + 1, establo1, descartar(establo2))
+        elif descartar_input == "mano":
+            print("El rival ha descartado una carta de su mano!")
+            print("La mano del rival se actualizo: ")
+            print(descartar(mazo_jugador2))
+            return turnos_aux(mazo_jugador1, descartar(mazo_jugador2), mazo_general, turno + 1, establo1, establo2)
+        else:
+            print("Digite exactamente si quieres descartar la mano o el mazo del rival")
+            return acciones_jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta)
     elif comprobar_tipo(mazo, mazo_jugador1[carta]) == "Desventaja":
         print("Haz elegido una desventaja, por lo que haz sacrificado una carta!")
         return turnos_aux(sacrificar(mazo_jugador1), mazo_jugador2, mazo_general, turno + 1, establo1, establo2)
