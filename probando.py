@@ -312,7 +312,7 @@ def acciones_jugador2(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo
     print("Jugaste esta carta: " + verde_negrita + mazo_jugador2[carta] + resetear)
     if comprobar_tipo(mazo, mazo_jugador2[carta]) == "Unicornio":
         print("Haz pasado un unicornio al establo")
-        print(f"Tu establo se actualizo: {establo2 + [mazo_jugador2[carta]]}")
+        print(verde_subrayado + "Tu establo se actualizo:" + resetear + " ", establo2 + [mazo_jugador2[carta]])
         return turnos_aux(mazo_jugador1, eliminar_elemento(mazo_jugador2, mazo_jugador2[carta]), mazo_general, turno - 1, establo1, establo2 + [mazo_jugador2[carta]])
     elif comprobar_tipo(mazo, mazo_jugador2[carta]) == "Ventaja":
         print("\nHaz hecho que el rival descarte un carta!")
