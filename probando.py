@@ -256,13 +256,15 @@ def acciones_jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo
         if descartar_input == "establo":
             print("El rival ha descartado una carta de su establo!: ")
             print("El establo rival se actualizo: ")
-            print(descartar(establo2))
-            return turnos_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno + 1, establo1, descartar(establo2))
+            establo_descartado = descartar(establo2)
+            print(establo2)
+            return turnos_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno + 1, establo1, establo_descartado)
         elif descartar_input == "mano":
             print("El rival ha descartado una carta de su mano!")
             print("La mano del rival se actualizo: ")
-            print(descartar(mazo_jugador2))
-            return turnos_aux(mazo_jugador1, descartar(mazo_jugador2), mazo_general, turno + 1, establo1, establo2)
+            mano_descartada = descartar(mazo_jugador2)
+            print(mano_descartada)
+            return turnos_aux(mazo_jugador1, mano_descartada, mazo_general, turno + 1, establo1, establo2)
         else:
             print("Digite exactamente si quieres descartar la mano o el mazo del rival")
             return acciones_jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta)
@@ -270,10 +272,27 @@ def acciones_jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo
         print("Haz elegido una desventaja, por lo que haz sacrificado una carta!")
         return turnos_aux(sacrificar(mazo_jugador1), mazo_jugador2, mazo_general, turno + 1, establo1, establo2)
     elif comprobar_tipo(mazo, mazo_jugador1[carta]) == "Magia":
-        print("Haz elegido una carta de magia, por lo que robas una carta adicional del mazo")
-        roba = robar(mazo_jugador1, mazo_general)
-        return turnos_aux(eliminar_elemento(roba[0], mazo_jugador1[carta]), mazo_jugador2, roba[1], turno + 1, establo1, establo2)
-    
+        print("Haz elegido una carta de magia, por lo que robas una carta aleatoria")
+        robar_input = input("Digite la palabra mazo si quieres robar una carta del mazo o establo si quieres robar una carta del establo rival: ")
+        if robar_input == "mazo":
+            print("Haz robado una carta del mazo!")
+            roba = robar(mazo_jugador1, mazo_general)
+            return turnos_aux(eliminar_elemento(roba[0], mazo_jugador1[carta]), mazo_jugador2, roba[1], turno + 1, establo1, establo2)
+        elif robar_input == "establo":
+            if len(establo2) == 0:
+                print("El establo esta vacio, por lo que se robara una carta del mazo")
+                print("Se ha robado una carta del mazo!")
+                roba = robar(mazo_jugador1, mazo_general)
+                return turnos_aux(eliminar_elemento(roba[0], mazo_jugador1[carta]), mazo_jugador2, roba[1], turno + 1, establo1, establo2)
+            else:
+                print("Haz robado una carta del establo rival!")
+                roba = robar(mazo_jugador1, establo2)
+                print("Tu mano se actualizo: ", roba[0])
+                return turnos_aux(roba[0], mazo_jugador2, mazo_general, turno + 1, establo1, roba[1])
+        else:
+            print("Digite exactamente si quieres descartar la mano o el mazo del rival")
+            return acciones_jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta)
+            
 def verificar_carta_jugador2(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2):
     '''Funcion que sirve para rellamar en caso de que el jugador selecciona un indice invalido'''
     carta = input("\nPresiona el numero de cual quieres utilizar (primera, segunda, tercera...): " )
@@ -316,16 +335,46 @@ def acciones_jugador2(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo
         return turnos_aux(mazo_jugador1, eliminar_elemento(mazo_jugador2, mazo_jugador2[carta]), mazo_general, turno - 1, establo1, establo2 + [mazo_jugador2[carta]])
     elif comprobar_tipo(mazo, mazo_jugador2[carta]) == "Ventaja":
         print("\nHaz hecho que el rival descarte un carta!")
-        print("Por lo que el mazo del rival seria el siguiente: \n")
-        print(descartar(mazo_jugador1))
-        return turnos_aux(descartar(mazo_jugador1), mazo_jugador2, mazo_general, turno - 1, establo1, establo2)
+        descartar_input = input("Digite mano para hacer que el rival descarte una carta de su mano o establo para hacer que el rival descarte una carta de su establo: ")
+        if descartar_input == "establo":
+            print("El rival ha descartado una carta de su establo!: ")
+            print("El establo rival se actualizo: ")
+            establo_descartado = descartar(establo1)
+            print(establo_descartado)
+            return turnos_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno - 1, establo_descartado, establo2)
+        elif descartar_input == "mano":
+            print("El rival ha descartado una carta de su mano!")
+            print("La mano del rival se actualizo: ")
+            mano_descartada = descartar(mazo_jugador1)
+            print(mano_descartada)
+            return turnos_aux(mano_descartada, mazo_jugador2, mazo_general, turno - 1, establo1, establo2)
+        else:
+            print("Digite exactamente si quieres descartar la mano o el mazo del rival")
+            return acciones_jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta)
     elif comprobar_tipo(mazo, mazo_jugador2[carta]) == "Desventaja":
         print("Haz sacrificado una carta!")
         return turnos_aux(mazo_jugador1, sacrificar(mazo_jugador2), mazo_general, turno - 1, establo1, establo2)
     elif comprobar_tipo(mazo, mazo_jugador2[carta]) == "Magia":
-        print("Por lo que robas una carta adicional del mazo")
-        roba = robar(mazo_jugador2, mazo_general)
-        return turnos_aux(mazo_jugador1, eliminar_elemento(roba[0], mazo_jugador2[carta]), roba[1], turno - 1, establo1, establo2)
+        print("Haz elegido una carta de magia, por lo que robas una carta aleatoria")
+        robar_input = input("Digite la palabra mazo si quieres robar una carta del mazo o establo si quieres robar una carta del establo rival: ")
+        if robar_input == "mazo":
+            print("Haz robado una carta del mazo!")
+            roba = robar(mazo_jugador2, mazo_general)
+            return turnos_aux(mazo_jugador1, eliminar_elemento(roba[0], mazo_jugador2[carta]), roba[1], turno - 1, establo1, establo2)
+        elif robar_input == "establo":
+            if len(establo2) == 0:
+                print("El establo esta vacio, por lo que se robara una carta del mazo")
+                print("Se ha robado una carta del mazo!")
+                roba = robar(mazo_jugador2, mazo_general)
+                return turnos_aux(mazo_jugador1, eliminar_elemento(roba[0], mazo_jugador2[carta]), roba[1], turno - 1, establo1, establo2)
+            else:
+                print("Haz robado una carta del establo rival!")
+                roba = robar(mazo_jugador2, establo1)
+                print("Tu mano se actualizo: ", roba[0])
+                return turnos_aux(mazo_jugador1, roba[0], mazo_general, turno - 1, roba[1], establo2)
+        else:
+            print("Digite exactamente si quieres descartar la mano o el mazo del rival")
+            return acciones_jugador2(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta)
 
                               
         
