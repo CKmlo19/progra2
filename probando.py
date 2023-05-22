@@ -1,4 +1,3 @@
-import os 
 import sys
 import random
 sys.setrecursionlimit(10000000)
@@ -25,6 +24,7 @@ def iniciar_juego():
     mano1 = manos(mazo)[0]
     mano2 = manos(mazo)[1]
     nuevo_mazo = manos(mazo)[2]
+    print(mano1, mano2, nuevo_mazo)
     print('Bienvenido al juego de unicornios inestables!')
     ver_instrucciones = input("\nPresiona la tecla " + azul_negrita +  "1" + resetear + " para ver las instrucciones completas. \nPresiona " + azul_negrita + "cualquier otra tecla" + resetear + " para jugar: ")
     if ver_instrucciones == "1":
