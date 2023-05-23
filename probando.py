@@ -277,18 +277,23 @@ def acciones_jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo
         if robar_input == "mazo":
             print("Haz robado una carta del mazo!")
             roba = robar(mazo_jugador1, mazo_general)
-            return turnos_aux(eliminar_elemento(roba[0], mazo_jugador1[carta]), mazo_jugador2, roba[1], turno + 1, establo1, establo2)
+            eliminar_carta = eliminar_elemento(roba[0], mazo_jugador1[carta])
+            print("Tu mano se actualizo al siguiente: ", eliminar_carta)
+            return turnos_aux(eliminar_carta, mazo_jugador2, roba[1], turno + 1, establo1, establo2)
         elif robar_input == "establo":
             if len(establo2) == 0:
                 print("El establo esta vacio, por lo que se robara una carta del mazo")
                 print("Se ha robado una carta del mazo!")
                 roba = robar(mazo_jugador1, mazo_general)
-                return turnos_aux(eliminar_elemento(roba[0], mazo_jugador1[carta]), mazo_jugador2, roba[1], turno + 1, establo1, establo2)
+                eliminar_carta = eliminar_elemento(roba[0], mazo_jugador1[carta])
+                print("Tu mano se actualizo al siguiente: ", eliminar_carta)
+                return turnos_aux(eliminar_carta, mazo_jugador2, roba[1], turno + 1, establo1, establo2)
             else:
                 print("Haz robado una carta del establo rival!")
                 roba = robar(mazo_jugador1, establo2)
-                print("Tu mano se actualizo: ", roba[0])
-                return turnos_aux(roba[0], mazo_jugador2, mazo_general, turno + 1, establo1, roba[1])
+                eliminar_carta = eliminar_elemento(roba[0], mazo_jugador1[carta])
+                print("Tu mano se actualizo: ", eliminar_carta)
+                return turnos_aux(eliminar_carta, mazo_jugador2, mazo_general, turno + 1, establo1, roba[1])
         else:
             print("Digite exactamente si quieres descartar la mano o el mazo del rival")
             return acciones_jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta)
