@@ -8,6 +8,8 @@ azul_negrita = "\033[94;1m"
 verde_negrita = "\033[92;1m"
 morado_negrita = "\033[35;1m"
 blanco_negrita =  "\033[97;1m"
+cian_negrita = "\033[1;36m"
+amarillo_negrita = "\033[1;33m"
 azul_subrayado = "\033[94;4m"
 verde_subrayado = "\033[4;92m"
 amarillo_subrayado = "\033[33;4m"
@@ -195,7 +197,7 @@ def turnos_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, esta
         sacar_carta = robar(mazo_jugador1, mazo_general)
         mazo_jugador1 = sacar_carta[0]
         mazo_general = sacar_carta[1]
-        print("\n====> Es el turno del " + azul_subrayado + "jugador 1" + resetear + " estas son tus cartas:")
+        print("\n====> Es el turno del " + cian_negrita + "jugador 1" + resetear + " estas son tus cartas:")
         print(f"\n{mazo_jugador1}")
         print("\nEste es tu establo actual: ")
         print(f"\n{establo1}")
@@ -204,7 +206,7 @@ def turnos_aux(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, esta
         sacar_carta = robar(mazo_jugador2, mazo_general)
         mazo_jugador2 = sacar_carta[0]
         mazo_general = sacar_carta[1]
-        print("\n====> Es el turno del " + amarillo_subrayado + "jugador 2" + resetear + " estas son tus cartas:")
+        print("\n====> Es el turno del " + amarillo_negrita + "jugador 2" + resetear + " estas son tus cartas:")
         print(f"\n{mazo_jugador2}")
         print("\nEste es tu establo actual: ")
         print(f"\n{establo2}")
