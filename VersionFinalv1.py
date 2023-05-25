@@ -447,7 +447,7 @@ def verificar_carta_jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, 
         
 def acciones_jugador1(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo1, establo2, carta):
     '''Funcion que aplica las acciones de las cartas al jugador 1 y pasa el turno'''
-    print("Jugaste esta carta: " + verde_negrita + mazo_jugador1[carta] + resetear)
+    print("Jugaste esta carta: " + verde_negrita + f"{mazo_jugador1[carta]}" + resetear)
 
     # Si la carta seleccionada es unicornio
     if comprobar_tipo(mazo, mazo_jugador1[carta]) == "Unicornio":
@@ -549,7 +549,7 @@ def acciones_jugador2(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo
     '''Funcion que aplica las acciones de las cartas al jugador 2 y pasa el turno '''
 
     # Si la carta seleccionada es unicornio
-    print("Jugaste esta carta: " + verde_negrita + mazo_jugador2[carta] + resetear)
+    print("Jugaste esta carta: " + verde_negrita + f"{mazo_jugador2[carta]}" + resetear)
     if comprobar_tipo(mazo, mazo_jugador2[carta]) == "Unicornio":
         print(blanco_negrita + "\nHaz pasado un unicornio al establo!" + resetear)
         print(verde_subrayado + "Tu establo se actualizo:" + resetear + " ", establo2 + [mazo_jugador2[carta]])
@@ -558,7 +558,7 @@ def acciones_jugador2(mazo_jugador1, mazo_jugador2, mazo_general, turno, establo
     # Si la carta seleccionada es de ventaja
     elif comprobar_tipo(mazo, mazo_jugador2[carta]) == "Ventaja":
         print(blanco_negrita + "\nHaz hecho que el rival descarte un carta!" + resetear)
-        descartar_input = ("Digite la palabra " + azul_negrita +  "mano" + resetear + " para hacer que el rival descarte una carta de su mano o " + azul_negrita + "establo"  + resetear + " para hacer que el rival descarte una carta de su establo: ")
+        descartar_input = input("Digite la palabra " + azul_negrita +  "mano" + resetear + " para hacer que el rival descarte una carta de su mano o " + azul_negrita + "establo"  + resetear + " para hacer que el rival descarte una carta de su establo: ")
         if descartar_input == "establo":
             if len(establo1) == 0:
                 print(rojo_negrita + "\nEl establo rival esta vacio, por lo que se descartara una carta de la mano del rival!" + resetear)
