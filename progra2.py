@@ -18,7 +18,7 @@ resetear = "\033[0m"
 
 
 # esto abre el archivo que esta en la misma carpeta
-with open("mazo.txt", "r", encoding="utf-8") as archivo:
+with open("Mazo_sin_lineas.txt", "r", encoding="utf-8") as archivo:
     contenido = archivo.read().rstrip("\n")
 
 
